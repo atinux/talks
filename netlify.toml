@@ -1,0 +1,12 @@
+[build.environment]
+  NODE_VERSION = "20"
+  PLAYWRIGHT_BROWSERS_PATH = "0"
+
+[build]
+  publish = "dist"
+  command = "pnpm run build"
+
+[[redirects]]
+  from = "/"
+  to = "https://github.com/atinux/talks"
+  status = 302
