@@ -2,4 +2,5 @@
 
 2024/02/28
 
-[Vue Amsterdam](https://vuejs.amsterdam/)
+- [Open slides online](https://talks.atinux.com/2024/full-stack-nuxt/)
+- [Vue Amsterdam](https://vuejs.amsterdam/) Conference
