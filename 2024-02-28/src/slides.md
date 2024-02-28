@@ -99,7 +99,7 @@ With Nuxt 3, we introduced the Server Routes.
 -------| [slug].get.ts   # /api/blog/:slug (only GET)
 -----| hello.ts          # /api/hello
 ---| routes/
------| bonjour.ts        # /bonjour
+-----| sitemap.xml.ts        # /sitemap.xml
 ---| middleware/
 -----| log.ts            # log all requests
 ```
