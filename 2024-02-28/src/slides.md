@@ -179,10 +179,12 @@ const { data } = await useFetch('/api/hello')
 
 <div v-after>
 
-```ts{2}
-export default defineEventHandler(async (event) => {
-  return { hello: 'world' }
-})
+```ts{2-4}
+export default defineEventHandler(
+  async (event) => {
+    return { hello: 'world' }
+  }
+)
 ```
 
 </div>
@@ -244,11 +246,11 @@ Build full stack apps, on the edge.
 
 <v-clicks>
 
-- **SQL database** to store your application's data with `hubDatabase()`
+- **SQLite database** to store your application's data with `hubDatabase()`
 - **Key-Value** to store JSON data accessible globally with low-latency with `hubKV()`
 - **Blob storage** to store static assets, such as images, video and more with `hubBlob()`
 - **Remote storage**: connect locally to your remote data with a secure proxy
-- **Self-host** on your Cloudflare account, no hidden costs
+- **Self-host** on your Cloudflare account, for free.
 
 </v-clicks>
 
@@ -257,6 +259,18 @@ layout: center
 ---
 
 # Demo
+
+---
+layout: center
+---
+
+<div class="text-center">
+
+# [Open]{.text-green} Source
+
+TODO: make <a href="https://github.com/nuxt-hub/core" target="_blank">repository</a> open source and set <a href="https://dash.cloudflare.com/c8539464e3cff13ca824f869b9306ae7/pages/view/nuxthub-module/domains" target="_blank">custom domain</a>
+
+</div>
 
 ---
 layout: center
@@ -274,7 +288,7 @@ layout: center
 
 # Come say [Hi!]{.text-green}
 
-<img src="/nuxtlabs-booth.png" alt="NuxtLabs" class="h-[300px] rounded-lg mb-2" />
+<img src="/nuxtlabs-booth.png" alt="NuxtLabs" class="h-[260px] rounded-lg mb-4" />
 
 <v-clicks>
 
