@@ -5,4 +5,4 @@ class: 'text-center pb-5'
 
 # Thank You!
 
-Slides can be found on [atinux/talks](https://github.com/atinux/talks)
+Slides are available on [atinux/talks](https://github.com/atinux/talks)

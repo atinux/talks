@@ -4,13 +4,14 @@ highlighter: shiki
 css: unocss
 colorSchema: dark
 transition: fade-out
+mdc: true
 fonts:
   sans: DM Sans
 ---
 
 <h1 flex="~ col" font-semibold>
 <div>Full Stack Development</div>
-<div flex="~ gap3" items-center>with <span inline-block i-logos-nuxt-icon text-1.2em mb-2/> <b font-bold>Nuxt</b></div>
+<div flex="~ gap3" items-center>with <Nuxt class="h-12" /></div>
 </h1>
 
 <div v-click uppercase text-sm tracking-widest>
@@ -22,7 +23,6 @@ Yes, we can.
   <div text-sm opacity-50>Fev. 28th 2024</div>
 </div>
 
-
 ---
 src: '../../reuse/intro.md'
 ---
@@ -31,575 +31,260 @@ src: '../../reuse/intro.md'
 layout: center
 ---
 
-# A bit of history
+# Traditional [Nuxt]{.text-green} Application
 
 ---
 layout: center
+clicks: 8
 ---
 
-<h1 font-bold class="text-5xl!">Nuxt Developer Experience</h1>
-
-<div absolute left-100 top-80 v-click>File-based Routing</div>
-<div absolute left-52 top-50 v-click>Modules Ecosystem</div>
-<div absolute left-100 top-50 v-click>Hot Module Replacement</div>
-<div absolute left-50 top-80 v-click>Server-side Rendering</div>
-
-<v-click>
-
-<div absolute left-158 top-50>Nitro</div>
-<div absolute left-145 top-80>ESM First</div>
-<div absolute left-170 top-80>Vite Powered</div>
-<div absolute left-60 top-90 op80>Zero-config</div>
-<div absolute left-90 top-90>Edge Rendering</div>
-
-</v-click>
-<v-click>
-
-<div absolute left-85 top-40>Hybrid Rendering</div>
-<div absolute left-130 top-90>Components Auto Imports</div>
-<div absolute left-125 top-40 op70>Composables Auto Imports</div>
-<div absolute left-55 top-40 op70>Middleware</div>
-<div absolute left-175 top-50 op70>SEO</div>
-
-</v-click>
-<v-click>
-
-<div absolute left-145 top-100 op60>Server API</div>
-<div absolute left-100 top-30 op70>Serverless</div>
-<div absolute left-70 top-30 op70>TypeScript</div>
-<div absolute left-130 top-30 op70>Server Components</div>
-<div absolute left-120 top-100 op70>Layouts</div>
-<div absolute left-70 top-100 op60>Static Site Generation</div>
-
-</v-click>
-
----
-growX: 0
-growY: 50
-class: flex
----
-
-<div my-auto w-full grid="~ cols-2 gap-5" px20>
-<div flex="~ col gap-5">
-<h1 v-click>Conventions</h1>
-<h1 v-click>Abstractions</h1>
-<h1 v-click>Sensible Defaults</h1>
-<h1 v-click>Normalizations</h1>
+<div class="flex items-center gap-2 relative">
+  <div i-ph-desktop-duotone text-7xl />
+  <div v-click :class="[$clicks >= 5 ? 'i-ph-arrow-left-duotone' : 'i-ph-arrow-right-duotone']" text-4xl />
+  <div v-after i-logos-nuxt-icon text-7xl />
+  <div v-click :class="{
+    'i-ph-arrow-right-duotone': $clicks < 4,
+    'i-ph-arrow-left-duotone': $clicks >= 4 && $clicks < 6,
+    'i-ph-arrows-horizontal-duotone text-amber-400 text-6xl': $clicks >= 6
+  }" text-4xl />
+  <div v-after i-ph-computer-tower-duotone text-7xl />
+  <v-click>
+    <div i-logos-strapi-icon text-3xl class="-right-[40px] absolute" />
+    <div i-logos-contentful text-3xl class="-right-[20px] top-[90px] absolute" />
+    <div i-simple-icons-wordpress text-white text-3xl class="-right-[20px] -top-[50px] absolute" />
+    <div i-logos-nestjs text-3xl class="-right-[70px] -top-[34px] absolute" />
+    <div i-logos-supabase-icon text-3xl class="-right-[75px] top-[66px] absolute" />
+  </v-click>
+  <div v-click="7" class="absolute text-amber-400 top-[50px] text-sm left-[210px]">latency</div>
+  <div v-click="8" class="absolute text-amber-400 top-[65px] text-lg left-[135px]">cost $</div>
+  <div v-click="8" class="absolute text-amber-400 top-[65px] text-lg right-[7px]">cost $</div>
 </div>
-<div flex="~ gap-5 col items-center justify-center">
-<h1 v-click class="text-right" w-full>Transparency</h1>
-</div>
-</div>
-
-<!-- 
-We introduced many conventions to reduce the need of having boilerplates, or code duplications.
-
-We also make quite some abstractions in order to shift the complexities from user app to the framework. So that's when you building an app with Nuxt, you can focusing more on the your own logic instead of worrying about the technical details of how bundler works, etc.
-
-We are trying our best to provide the sensible default that makes Nuxt works out of box with zero configration, while keeping the best practice for you to deliver your app with the best performance and user experience.
-
-We also put quite some effort in terms of normalizations of underlying tools. With unplugin, we smooth out the details between Vite and Webpack, make Nuxt support both interchangeably based on your needs. With Nitro, we make deployment easier than ever. With the same codebase, you can deploy your app to any hosting providers, like Vercel or Netlify, or hosting your own Node or Deno server, without any code changes.
-
-===
-
-Those features are super awesome, but we see that the trade-off we have to make is to sacrifice a bit of the transparency. By transparency, I mean, the ability to see what's going on under the hood, the cost of learning and understanding each feature Nuxt provides. This trade-off is inevitable, as for any tools, you have to learn before you can use it. But how we could make it better? That's where Nuxt DevTools comes in.
--->
-
----
-class: ml-30 mt-5
----
-
-<h1><NuxtDevTools h-8/></h1>
-
-<div text-xl flex="~ col gap-6" pl3 mt10>
-<v-clicks>
-
-<div flex="~ gap-3 items-center">
-  <div i-tabler-3d-cube-sphere text-3xl /> 
-  <span op80>Improve Transparency</span>
-</div>
-
-<div flex="~ gap-3 items-center">
-  <div i-tabler-terminal text-3xl />
-  <span op80>Enhance Developer Experience</span>
-</div>
-
-<div flex="~ gap-3 items-center">
-  <div i-tabler-brand-speedtest text-3xl />
-  <span op80>Performance & Bundle Analysis</span>
-</div>
-
-<div flex="~ gap-3 items-center">
-  <div i-tabler-books text-3xl />
-  <span op80>Personalized Documentations</span>
-</div>
-
-<div flex="~ gap-3 items-center">
-  <div i-tabler-horse-toy text-3xl />
-  <span op80>Interactive & Playful</span>
-</div>
-
-<div flex="~ gap-3 items-center">
-  <div i-tabler-browser-plus text-3xl />
-  <span op80>Cross-browsers (works even for mobile!)</span>
-</div>
-
-<div flex="~ gap-3 items-center">
-  <div i-tabler-puzzle text-3xl />
-  <span op80>Extensible</span>
-</div>
-
-</v-clicks>
-</div>
-
----
-layout: center
-class: text-center
-growX: 50
-growY: 50
----
-
-# In the Past 8 Months
-
-Since the Nuxt DevTools has announced
-
----
-growX: 100
-growY: 100
-class: ml-20 mt-5
----
-
-## State of Nuxt DevTools
-
-###### As of October 10th, 2023
-
-<div grid="~ cols-[auto_1fr] gap-x-4 gap-y-2" items-center my6>
-  <v-clicks :every="2">
-    <div text-right text-4xl font-bold color="[#BD3E53]">504K</div><div text-left text-lg op80>Monthly downloads on NPM</div>
-    <div text-right text-4xl font-bold color="[#BD7C3E]">24%</div><div text-left text-lg op80>Downloads of Nuxt 3</div>
-    <div text-right text-4xl font-bold color="[#A9BD3E]">16K</div><div text-left text-lg op80>Open Source projects dependents</div>
-    <div text-right text-4xl font-bold color="[#54BD3E]">2.3K</div><div text-left text-lg op80>Stars on GitHub</div>
-    <div text-right text-4xl font-bold color="[#3EBD7C]">18</div><div text-left text-lg op80>Builtin tabs</div>
-    <div text-right text-4xl font-bold color="[#3EAABD]">53</div><div text-left text-lg op80>Contributors</div>
-    <div text-right text-4xl font-bold color="[#3E55BD]">20+</div><div text-left text-lg op80>Nuxt Modules integrates Nuxt DevTools</div>
-  </v-clicks>
-</div>
-
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# In App DevTools
-
-<VideoDemo src="/devtools/0-intro.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Pages View
-
-<VideoDemo src="/devtools/1-pages.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Components View
-
-<VideoDemo src="/devtools/2-components.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Auto Imports View
-
-<VideoDemo src="/devtools/3-imports.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Modules Management
-
-<VideoDemo src="/devtools/4-modules.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Static Assets Management
-
-<VideoDemo src="/devtools/5-assets.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Runtime Configs Editor
-
-<VideoDemo src="/devtools/6-runtime-configs.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Payload Editor
-
-<VideoDemo src="/devtools/7-payload.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Open Graph Preview
-
-<VideoDemo src="/devtools/8-open-graph.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Plugins Overview
-
-<VideoDemo src="/devtools/9-plugins.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Timeline View <sup>experimental</sup>
-
-<VideoDemo src="/devtools/10-timeline.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Production Build Analyzer
-
-<VideoDemo src="/devtools/11-build-analyze.mp4" mt--2 />
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Server API Playground
-
-<VideoDemo src="/devtools/12-server-api.mp4" mt--2 />
-
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Embedded Full-feature VS Code
-
-<VideoDemo src="/devtools/13-vscode.mp4" mt--2 />
-
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Components Inspector
-
-<VideoDemo src="/devtools/0-inspector.mp4" mt--2 />
-
-
----
-class: text-center
-growX: 90
-growY: 0
-preload: false
----
-
-# Split Screens
-
-<VideoDemo src="/devtools/0-split-view.mp4" mt--2 />
-
----
-layout: center
-growX: 50
-growY: 100
----
-
-<FeatureList />
 
 <!--
-That's only a part of features we provide. We are happy to hear if any of them have ever make your more productive, or make your work more enjoyable. We are also eager to hear if you have any feedbacks or suggestions to help us even further.
+Let's take a look at how it works. Here we have our customer using a fancy computer.
+
+[click] When going to my website, it hits my Nuxt server. And in most common cases, my Nuxt app will call another API.
+
+[click] This server can either be a headless CMS, service API or a custom API built for a specific use case.
+
+[click] We can think of some examples such as Strapi, Supabase, Wordpress, etc.
+
+[click] This API sends back the data, most of the time as JSON
+
+[click] Lastly, my Nuxt server will server render my Vue application and return HTML, CSS and JavaScript in order to have a universal application.
+
+[click] This API calls made between my Nuxt server and the API can suffer from lantency if they are located on different locations
+
+[click] And on top of this, I would have to pay for two servers to run
 -->
 
 ---
-growX: 100
-growY: 50
+layout: center
 ---
 
-# Community Modules
-
-Have Integrated Nuxt DevTools already
-
-<ModulesIcons/>
+# [Nuxt]{.text-green} Server Routes
 
 <!--
-We are excited to see that there are already many modules have integrated Nuxt DevTools already, even though it's still in beta. We are super grateful for having such a supportive community.
+With Nuxt 3, we introduced the Server Routes.
 -->
 
 ---
 
-# Projects Inspired by Nuxt DevTools
+# [File-based]{.text-green} Routing
 
-<div pt10 />
+```bash {1|2,5|2-4|6-7|8-9|all}
+-| server/
+---| api/
+-----| blog/
+-------| [slug].get.ts   # /api/blog/:slug (only GET)
+-----| hello.ts          # /api/hello
+---| routes/
+-----| bonjour.ts        # /bonjour
+---| middleware/
+-----| log.ts            # log all requests
+```
+
+<div v-after class="mt-8 inline-flex items-center gap-1">Powered by <NitroIcon class="inline-block h-6" /> <a href="https://nitro.unjs.io">Nitro</a>.</div>
+
+---
+
+# API Route [Format]{.text-green}
+
+```ts{1,10|2|3|4|5|7|9}
+export default defineEventHandler(async (event) => {
+  const path = event.path
+  const params = event.context.params
+  const query = getQuery(event)
+  const body = await readBody(event)
+
+  throw createError({ statusCode: 400, message: 'bad input' })
+
+  return { all: 'good' }
+})
+```
+
+<div v-after class="mt-8 inline-flex items-center gap-1">Powered by <a href="https://h3.unjs.io">H3 Utils</a>.</div>
+
+---
+
+# [Hot]{.text-green} Module Replacement
+
+<VideoDemo src="/server-hmr.mp4" />
+
+---
+
+<div class="flex items-baseline justify-between gap-2">
+  <h1><span class="text-green">High</span> Performance</h1>
+  <span class="op-70 pr-3">Code Splitting for minimal cold-start</span>
+</div>
+
+<VideoDemo src="/server-performance.mp4" />
+
+---
+
+<div class="flex items-baseline justify-between gap-2">
+  <h1><span class="text-green">End-to-end</span> TypeScript Support</h1>
+  <span class="op-70 pr-3">Feels like RPC.</span>
+</div>
+
+<VideoDemo src="/server-autocomplete.mp4" />
+
+---
+
+# [Function calls]{.text-green} during SSR
+
+<p class="text-white! text-lg! mt-12!" v-click :class="{ 'op-100!': $clicks >= 1 }">
+
+During server-side rendering, calling `useFetch` or `$fetch` for Nuxt Server routes will emulate a request and call the exported function, [saving HTTP round-trip time and bandwidth]{.text-green}.
+
+</p>
+
+<div class="w-full flex gap-2 justify-between items-center">
+
+<v-after>
+
+```vue
+<script setup>
+const { data } = await useFetch('/api/hello')
+</script>
+
+<template>
+  <div>{{ data }}</div>
+</template>
+```
+
+</v-after>
+
+<div v-click i-ph-arrow-right-duotone text-7xl />
+
+<div v-after>
+
+```ts{2}
+export default defineEventHandler(async (event) => {
+  return { hello: 'world' }
+})
+```
+
+</div>
+
+</div>
+
+<p class="text-white! text-lg! mt-12!" v-click>
+
+Calling `$fetch` inside your API routes to call other API routes will also call the function directly.
+
+</p>
+
+---
+
+# [Nuxt Devtools]{.text-green} Integration
+
+<VideoDemo src="/server-devtools.mp4" />
+
+---
+layout: center
+---
+
+# What about [storing data]{.text-green}?
+
+---
+layout: center
+---
+
+<div class="relative">
+  <div i-logos-nuxt-icon text-8xl />
+  <!-- <div class="absolute w-[216px] h-[216px] border -top-[60px] -left-[60px] rounded-full" /> -->
+  <div v-click class="absolute -top-[120px] left-[10px] text-xl text-center items-center inline-flex flex-col">
+    Database
+    <div i-ph-database-duotone text-7xl />
+  </div>
+
+  <div v-click class="absolute top-[110px] -left-[80px] text-xl text-center">
+    <div i-ph-coin-duotone text-7xl />
+    KV
+  </div>
+  <div v-click class="absolute top-[80px] left-[130px] text-xl text-center">
+    <div i-ph-shapes-duotone text-7xl />
+    Blob
+  </div>
+</div>
+
+
+---
+layout: center
+---
+
+# I [got something]{.text-green} for you...
+
+---
+
+# Meet [NuxtHub]{.text-green}
+
+Build full stack apps, on the edge.
 
 <v-clicks>
 
-- <div i-logos-vue h-2em w-2em inline-block align-middle mr2 /> <a href="https://github.com/webfansplz/vite-plugin-vue-devtools">webfansplz/vite-plugin-vue-devtools</a>
-
-- <img src="/pheno.png" h-2em w-2em inline-block align-middle scale-130 mr2 /> <a href="https://github.com/pheno-agency/vite-plugin-devtools">pheno-agency/vite-plugin-devtools</a> <sup op50>experimental</sup>
-
-- <img src="/modern-js-logo.svg" h-2em w-2em inline-block align-middle scale-125 mr2 /> <a href="https://github.com/Asuka109/modern.js/tree/dev/modernjs-devtools/packages/devtools/plugin">Modern.js DevTools</a> <sup op50>work in progress</sup>
-
-- <div i-logos-qwik-icon inline-block align-middle h-2em w-2em mr2 /> <a href="https://github.com/QwikDev/devtools">Qwik DevTools</a> <sup op50>work in progress</sup>
+- **SQL database** to store your application's data with `hubDatabase()`
+- **Key-Value** to store JSON data accessible globally with low-latency with `hubKV()`
+- **Blob storage** to store static assets, such as images, video and more with `hubBlob()`
+- **Remote storage**: connect locally to your remote data with a secure proxy
+- **Self-host** on your Cloudflare account, no hidden costs
 
 </v-clicks>
 
-<!--
+---
+layout: center
+---
 
-And we are honored to hear that there are a few projects are inspired by Nuxt DevTools
-
-We have vite-plugin-vue-devtools, a Vite plugin that ported some features from Nuxt DevTools, covering the Vue users that are not on Nuxt yet. We are working closely together to explore the possibilities of better experience for Vue and share the common parts.
-
-We also have vite-plugin-devtools, an experiment to have a universal Vite DevTools that works for different frameworks.
-
-Then we have heard that Modern.js and Qwik is building their own DevTools, with the similiar approach of Nuxt DevTools to provide in-app DevTools for their users.
-
-We are super excited to see more and more projects are exploring the possibilities of DevTools and Developer Experience. That we could learn from each other and explore together to make it even better.
-
--->
+# Demo
 
 ---
 layout: center
-growX: 0
-growY: 50
 ---
 
-# What's Next?
+<div class="text-center">
 
----
-layout: center
-class: text-center
-growX: 50
-growY: 50
----
+# [hub]{.text-green}.nuxt.com
 
-<div relative>
-
-<NuxtDevTools h-15 v-click/>
-
-<div class="springing" v-click relative>
-  <div 
-    text-25em font-900 font-number
-    op20 z--1 pos="absolute left-1/2 top-3/10" translate="x--1/2 y--8.5/15"
-  ><span>1.0</span></div>
-</div>
+<h2 v-click>github.com/<span class="text-green">nuxt-hub/core</span></h2>
 
 </div>
 
-<!-- Announcing Nuxt DevTools 1.0 -->
-
----
-class: ml-30 mt-5
 ---
 
-<h1 flex="~ gap-2"><NuxtDevTools h-8/> <span font-bold>1.0</span></h1>
+# Come say [Hi!]{.text-green}
 
-<div text-xl flex="~ col gap-6" pl3 mt10>
+<img src="/nuxtlabs-booth.png" alt="NuxtLabs" class="h-[300px] rounded-lg mb-2" />
+
 <v-clicks>
 
-<div flex="~ gap-3 items-center">
-  <div i-carbon-3d-mpr-toggle text-3xl /> 
-  <span op80>Modules API Stability</span>
-</div>
-
-<div flex="~ gap-3 items-center">
-  <div i-carbon-tools-alt text-3xl /> 
-  <span op80>UI Improvements</span>
-</div>
-
-<div flex="~ gap-3 items-center">
-  <div i-simple-icons-nuxtdotjs text-3xl />
-  <span op80>Ship and enable by default in Nuxt 3</span>
-</div>
-
-<div flex="~ gap-3 items-center" ml10>
-  <div i-ri-eye-line text-3xl />
-  <span op80>Minimal distraction</span>
-</div>
-
-<div flex="~ gap-3 items-center" ml10>
-  <div i-ri-keyboard-box-line text-3xl /> 
-  <span op80>One shortcut away</span>
-</div>
-
-<div flex="~ gap-3 items-center" ml10>
-  <div i-carbon-storage-pool text-3xl /> 
-  <span op80>Seamlessly opt-in</span>
-</div>
-
-</v-clicks>
-</div>
-
-<!--
-Nuxt DevTools 1.0 serves as a milestone. There are no many new features in 1.0, but it's more like a statement indicates that Nuxt DevTools' approach is mature enough. We are marking the Modules API as stable, so that module authors could provide the integrations more confidently. We also did some UI improvements since the previous versions. And most importantly, Nuxt DevTools will be ship with Nuxt 3.8 and general available to all Nuxt users. By doing that, we want to make sure the onboarding experience as seamless as possible. Meaning that by default, you won't see any visual different in you app. The DevTools will be hidden to minimize the distraction. Instead, we will print an instrution in your terminal telling you that you can press a shortcut to enable it as you want. Making the opt-in as easy as possible.
--->
- 
----
-layout: center
-growX: 0
-growY: 0
----
-
-<h1 flex="~ gap-2">
-  <NuxtDevTools h-8/>
-  <span font-bold>1.0</span>
-  <span v-click>released NOW</span>
-</h1>
-
-<div v-click op60 text-2xl mt--3>And will be shipped by default in Nuxt 3.8 soon</div>
-
-<!--
-So that said, Nuxt DevTools 1.0 will be released now, and it will be shipped by default in Nuxt 3.8 very soon.
--->
-
----
-
-# Upcoming
-
-<v-clicks depth="2">
-
-- Nuxt Accessibility Integration
-
-- Pinia Playground
-- Vue DevTools Integration
-  - Reactivity Inspector
-  
-  - Render Tree
-  - Props Editor
-- "DevTools Kit"
-
-  - A shared infra and conventions for building devtools
+- **30% off on UI Pro** with `VUEAMSTERDAM2024` until Friday
+- Free Nuxt Beanies (stock limited)
+- Stickers Stickers Stickers
 
 </v-clicks>
 
-<!--
-And after Nuxt DevTools 1.0, there are a few upcoming things I'd like to share with you:
-
-The first is that we are working on a Nuxt Accessibility module, provide accessibility hints and suggestion for you Nuxt app. And we will build an UI for it in Nuxt DevTools.
-
-And the next is the Pinia playground, something that has been requested for a long time. We will provide a playground for you to inspect and play with the states in your Pinia store.
-
-We are also working with Vue team to experiment the reactivity tracking in Vue. Including features like Render Tree and Props Editor. Our plan is to unify Nuxt DevTools and Vue DevTools to have all the things in one place.
-
-And lastly, we came up an idea called DevTools Kit, a shared infrastructures and conventions for building devtools. Let me explain a bit more about it.
--->
-
 ---
-growX: 120
-growY: 90
-clicks: 20
+layout: end
+src: '../../reuse/thanks.md'
 ---
-
-<DevToolsKit />
-
-<!--
-DevTools Kit is currently just an idea and we are still brainstroming. But here that me share what we imagine it could be.
-
-We see that each feature provided by Nuxt DevTools have each own scope, some are Nuxt specific, some are Vue specific, some are more about general Web Developement. We think in the best world, each feature could be modular, composable and collabrative.
-
-For example, we could have general features for Web, such as SEO tools, editor integrations, accessibility, etc.
-And then, we could have Vite specific features, such as Bundle Analyzer, Transform Inspector, etc.
-About Vue, we could have tabs like components, reactivity inspector and so on.
-On top of that, we then could have some Nuxt specific features like Nuxt modules, Server API and so on.
-
-Imagine we might able to integrate React's DevTools, state management. Or routes and components view for Svelte, reactivity tracking for Solid, chunking view for Qwik, or even webpack and rspack integrations.
-
-Other than frameworks and bundlers, we could have other integrations like Vitest, UnoCSS, Storybook, Histories and many many more.
-
-With the whole picture, we could found the Nuxt DevTools, is actually the composition of different features here. Nuxt is a Vue meta framework, so we could have all Vue features adding Nuxt specific features.
-
-With a bit limited scope, excluding Nuxt features, we will have Vue DevTools. Similarly, one day we might see a React DevTools coming, sharing the majority of the common features here, and maybe a Svelte DevTools, a Solid DevTools, a Qwik DevTools, or even Morden.js DevTools that aren't built on top of Vite.
-
-In that regards, maybe you can pick what you need a compose your own DevTools?
-
-So, that's our vision, each feature could share and collabrate across different frameworks and benefit to all frameworks. Indeed there are quite some challenges to make it happen, we will see how far we could go. Stay tuned!
--->
-
----
-layout: center
-class: text-center
-growX: 50
-growY: -10
----
-
-<div text-6xl font-extrabold>Developer Experience</div>
-<div text-5xl mt3 v-click text-transparent bg-clip-text bg-gradient-to-r from-yellow via-green to-blue>Key to Great Softwares</div>
-
-<!-- So in the end, I'd say, that Developer Experience is the key to great softwares as well as better User Experience. I am so glad to see that more and more tools entering the field of developer experience. Together, let's make it even better! That's all for my talk, thank you! -->
-
----
-layout: intro
-class: text-center pb-5
-growX: 50
-growY: 120
----
-
-# Thank You!
-
-Slides on [antfu.me](https://antfu.me)

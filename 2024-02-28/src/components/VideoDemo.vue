@@ -11,8 +11,8 @@ const controls = ref(false)
 <template>
   <video
     type="video/mp4"
+    h-full pb-12
     :src="src" loop muted autoplay :controls="controls"
-    w-190 ma shadow-2xl
     :style="{
       'border-radius': '1% / 1.5%',
     }"
