@@ -129,7 +129,7 @@ export default defineEventHandler(async (event) => {
 
 # [Hot]{.text-green} Module Replacement
 
-<VideoDemo src="/server-hmr.mp4" />
+<VideoDemo src="server-hmr.mp4" />
 
 ---
 
@@ -138,7 +138,7 @@ export default defineEventHandler(async (event) => {
   <span class="op-70 pr-3">Code Splitting for minimal cold-start</span>
 </div>
 
-<VideoDemo src="/server-performance.mp4" />
+<VideoDemo src="server-performance.mp4" />
 
 ---
 
@@ -147,7 +147,7 @@ export default defineEventHandler(async (event) => {
   <span class="op-70 pr-3">Feels like RPC.</span>
 </div>
 
-<VideoDemo src="/server-autocomplete.mp4" />
+<VideoDemo src="server-autocomplete.mp4" />
 
 ---
 
@@ -201,7 +201,7 @@ Calling `$fetch` inside your API routes to call other API routes will also call 
 
 # [Nuxt Devtools]{.text-green} Integration
 
-<VideoDemo src="/server-devtools.mp4" />
+<VideoDemo src="server-devtools.mp4" />
 
 ---
 layout: center
@@ -288,7 +288,7 @@ layout: center
 
 # Come say [Hi!]{.text-green}
 
-<img src="/nuxtlabs-booth.png" alt="NuxtLabs" class="h-[260px] rounded-lg mb-4" />
+<img src="nuxtlabs-booth.png" alt="NuxtLabs" class="h-[260px] rounded-lg mb-4" />
 
 <v-clicks>
 
