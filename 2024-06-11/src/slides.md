@@ -31,7 +31,7 @@ layout: center
 
 <div v-click>
 
-## It is a limited JavaScript environment running on CDN Nodes.
+## Limited JavaScript environment running on CDN Nodes.
 
 </div>
 
@@ -93,6 +93,45 @@ layout: center
 # Nuxt got your back 🦾
 
 </div>
+
+---
+layout: center
+---
+
+# What is [Nuxt]{.text-green}?
+
+
+<div v-click>
+
+## Web Framework to create full-stack applications with TypeScript and Vue.js
+
+</div>
+
+<div v-click>
+
+October 2016 • 52K stars on GitHub • 2,7M downloads/month
+
+</div>
+
+---
+
+# Nuxt [features]{.text-green}
+
+<v-clicks>
+
+- Server-side rendering (optional)
+- Pre-rendering (SSG, ISR, Hybrid)
+- File-based routing with code splitting
+- Data fetching
+- Layouts & Middleware
+- State management
+- Auto-imports
+- Server API routes
+- Layers (extend a Nuxt app)
+- Modules ecosystem (200+)
+- Deploy anywhere (no vendor lock-in)
+
+</v-clicks>
 
 ---
 
