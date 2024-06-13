@@ -90,7 +90,7 @@ layout: center
 
 <div v-click class="pt-12">
 
-# Nuxt got your back 🦾
+# Nuxt has your back 🦾
 
 </div>
 
