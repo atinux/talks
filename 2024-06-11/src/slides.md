@@ -482,7 +482,7 @@ layout: center
 
 # [draw]{.text-green}.nuxt.dev
 
-<img src="qr-code.png" />
+<img src="/qr-code.png" />
 
 </div>
 

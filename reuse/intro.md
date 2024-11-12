@@ -18,15 +18,17 @@ CEO at <a href="https://nuxtlabs.com">NuxtLabs</a>.<br>
     <a href="https://github.com/atinux" target="_blank">atinux</a>
   </div>
   <div flex items-center gap-2>
-    <div i-simple-icons-x text-xl />
-    <a href="https://x.com/atinux" target="_blank">atinux</a>
+    <div i-simple-icons-bluesky text-xl />
+    <a href="https://bsky.app/profile/atinux.com" target="_blank">atinux.com</a>
   </div>
   <div flex items-center gap-2>
     <div i-heroicons-link text-xl />
     <a href="https://atinux.com" target="_blank">atinux.com</a>
   </div>
-</v-click>
-<v-click>
+  <div flex items-center gap-2>
+    <div i-simple-icons-x text-xl />
+    <a href="https://x.com/atinux" target="_blank">atinux</a>
+  </div>
   <div flex items-center gap-2>
     <div i-simple-icons-linkedin text-xl />
     <a href="https://linkedin.com/in/atinux" target="_blank">atinux</a>
@@ -46,10 +48,6 @@ CEO at <a href="https://nuxtlabs.com">NuxtLabs</a>.<br>
   <div flex items-center gap-2>
     <div i-simple-icons-gitlab text-xl />
     <a href="https://gitlab.com/atinux" target="_blank">atinux</a>
-  </div>
-  <div flex items-center gap-2>
-    <div i-simple-icons-pinterest text-xl />
-    <a href="https://pinterest.com/@atinux" target="_blank">atinux</a>
   </div>
 </v-click>
 </div>

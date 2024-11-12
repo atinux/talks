@@ -1,27 +1,30 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.15.1",
+  "packageManager": "pnpm@9.12.3",
   "scripts": {
     "build": "rimraf dist && pnpm -r run build",
     "dev": "esno scripts/picker.ts dev --open",
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.4",
-    "@iconify/json": "^2.2.186",
-    "@slidev/cli": "^0.47.5",
+    "@antfu/eslint-config": "^3.8.0",
+    "@iconify/json": "^2.2.270",
+    "@slidev/cli": "^0.49.29",
     "@slidev/theme-default": "^0.25.0",
-    "@types/node": "^20.11.20",
+    "@types/node": "^22.9.0",
     "@types/prompts": "^2.4.9",
-    "eslint": "^8.57.0",
-    "esno": "^4.0.0",
-    "execa": "^8.0.1",
+    "eslint": "^9.14.0",
+    "esno": "^4.8.0",
+    "execa": "^9.5.1",
     "fast-glob": "^3.3.2",
-    "playwright-chromium": "^1.41.2",
+    "playwright-chromium": "^1.48.2",
     "pnpm": "^8.15.4",
     "prompts": "^2.4.2",
-    "rimraf": "^5.0.5",
-    "typescript": "^5.3.3"
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "seedrandom": "^3.0.5"
   }
 }

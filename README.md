@@ -4,6 +4,7 @@ Slides & Links for my talks.
 
 ## 2024
 
+- [Authentication in Nuxt](./2024-11-13) -Nuxt Nation (online)
 - [Full Stack Nuxt](./2024-02-28) - Vue Amsterdam - Netherlands 🇳🇱
 - [Building for the Edge](./2024-06-11) - Code Europe - Kraków, Poland 🇵🇱
 
