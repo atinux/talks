@@ -33,26 +33,33 @@ Slides & Links for my talks.
 
 ## 2019
 
-- [Be Lazy, Be Smart, Be Nuxt.](https://www.youtube.com/watch?v=vbsPXHCu8Xg) - ReactiveConf
-- `fr` [Nuxt.js, ou comment faire des applications universelles avec des fichiers](https://www.youtube.com/watch?v=X0z63UlYA6c) - Web2day
-- [Deep Dive into Nuxt.js internals](https://www.youtube.com/watch?v=mxJlUMFC9Ns) - Vue Day
+- [Be Lazy, Be Smart, Be Nuxt.](https://www.youtube.com/watch?v=vbsPXHCu8Xg) - ReactiveConf, Prague, Czech Republic
+- `fr` [Nuxt.js, ou comment faire des applications universelles avec des fichiers](https://www.youtube.com/watch?v=ZF4e1A_hosk&t=9s) - Devoxx, Paris, France
+- `fr` [Nuxt.js, ou comment faire des applications universelles avec des fichiers](https://www.youtube.com/watch?v=X0z63UlYA6c) - Web2day, Nantes, France
+- [Deep Dive into Nuxt.js internals](https://www.youtube.com/watch?v=mxJlUMFC9Ns) - Vue Day, Alicante, Spain
 
 ## 2018
 
-- [Nuxt 2](https://www.youtube.com/watch?v=3dFFy8waxcg) - Vue Fes Japan
-- [Nuxt 2](https://www.youtube.com/watch?v=-Z1hI4Wxblo) - Vue Toronto
-- [Vue & Nuxt: Best Practices](https://www.youtube.com/watch?v=OF3A_arLJ8k&t=25s) - VueConf US
-- [Meta Vue Framework](https://www.youtube.com/watch?v=9jATabR27ME) - JS Heroes
-- [How to server render an application with Vue 2](https://www.youtube.com/watch?v=MH0-85w3b3E) - Vue Amsterdam
+- [Nuxt 2](https://www.youtube.com/watch?v=3dFFy8waxcg) - Vue Fes, Tokyo, Japan
+- [Nuxt 2](https://www.youtube.com/watch?v=-Z1hI4Wxblo) - Vue Toronto, Canada
+- Introducing Nuxt 2 - Vue.js Live - London, UK
+- Introducing Nuxt 2 - Vue.js Roadtrip - Barcelona, Spain
+- [Vue & Nuxt: Best Practices](https://www.youtube.com/watch?v=OF3A_arLJ8k&t=25s) - VueConf US, New Orleans, USA
+- [Meta Vue Framework](https://www.youtube.com/watch?v=9jATabR27ME) - JS Heroes, Cluj-Napoca, Romania
+- Mono, Web API Framework - HolyJS, St. Petersburg, Russia
+- `fr` [Nuxt.js](https://www.youtube.com/watch?v=VmYcHNIp4tM&t=776s) - Best of Web, Paris, France
+- [How to server render an application with Vue 2](https://www.youtube.com/watch?v=MH0-85w3b3E) - Vue Amsterdam, Netherlands 
 
 ## 2017
 
-- [Server-Side Rendering in Vue.js with Nuxt.js Framework](https://www.youtube.com/watch?v=Dkf3AwxrSjE) - VueConf EU
+- Meta Vue Framework - Zeit Day, Berlin, Germany
+- [Server-Side Rendering in Vue.js with Nuxt.js Framework](https://www.youtube.com/watch?v=Dkf3AwxrSjE) - VueConf EU, Wrocław, Poland
+- Nuxt Introduction - Zeit Day - San Francisco, USA
 
 ## 2016
 
-- `fr` [Nuxt.js: Universal Vue.js Applications](https://www.youtube.com/watch?v=qHZGxhMMKCQ) - DotKS
-- `fr` [Introduction a Nuxt.js](https://www.youtube.com/watch?v=NVjbY_TkDd4&t=1009s) - Vue Meetup
+- `fr` [Nuxt.js: Universal Vue.js Applications](https://www.youtube.com/watch?v=qHZGxhMMKCQ) - DotJS, Paris, France
+- `fr` [Introduction a Nuxt.js](https://www.youtube.com/watch?v=NVjbY_TkDd4&t=1009s) - Vue Meetup, Paris, France
 
 ## Credits
 
