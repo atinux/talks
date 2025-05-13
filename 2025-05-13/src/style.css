@@ -1,0 +1,17 @@
+.dark #slide-content {
+  background-color: #020420 !important;
+}
+
+
+:root .dark {
+  --shiki-foreground: #eeeeee;
+  --shiki-dark-bg: blue !important;
+}
+
+
+h1 {
+  @apply font-bold text-3xl;
+}
+[layout="center"] h1 {
+  @apply text-5xl;
+}

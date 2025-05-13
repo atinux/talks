@@ -11,12 +11,10 @@ Creator of <a href="https://nuxt.com">Nuxt</a> and CEO at <a href="https://nuxtl
 </div>
 
 <p v-click class="text-gray-400 w-1/2">
-NuxtLabs sponsors & contributes to Nuxt development and builds products around it.
-</p>
 
-<div v-click class="text-gray-400 w-1/2 inline-flex gap-4">
-<a href="https://ui.nuxt.com/pro" class="text-white">Nuxt UI Pro</a> • <a href="https://nuxt.studio" class="text-white">Nuxt Studio</a> • <a href="https://hub.nuxt.com" class="text-white">NuxtHub</a>
-</div>
+Our mission is to create the best [Developer Experience]{.text-white .font-semibold} to build the best [User Experience]{.text-white .font-semibold}.
+
+</p>
 
 <div class="grid my-10 gap-4 op-90 grid-rows-3 grid-flow-col w-1/2 border-t border-white/10 pt-8" v-click>
   <div flex items-center gap-2>
