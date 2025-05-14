@@ -31,7 +31,7 @@ layout: center
 
 <div v-click>
 
-### Limited JavaScript environment running on CDN Nodes.
+### Limited JavaScript runtime running on CDN Nodes.
 
 </div>
 
@@ -42,7 +42,7 @@ layout: center
 - <lucide-fingerprint class="text-green" /> Request / Context isolation <span class="opacity-50">(no shared state)</span>
 - <lucide-circle-dollar-sign class="text-green" /> Affordable <span class="opacity-50">(100K requests/day for free on Cloudflare)</span>
 - <lucide-circle-alert class="text-orange" /> Subset of Node.js & Browser APIs  <span class="opacity-50">(FS, HTTP, DOM, etc.)</span>
-- <lucide-circle-alert class="text-orange" /> Small server size limit <span class="opacity-50">(10 MB maximum)</span>
+- <lucide-circle-alert class="text-orange" /> Small server size limit <span class="opacity-50">(10MB gzip maximum)</span>
 
 </v-clicks>
 
@@ -82,7 +82,7 @@ layout: center
 <v-clicks>
 
 - <lucide-circle-alert class="text-orange" /> Subset of Node.js & Browser APIs  <span class="opacity-50">(FS, HTTP, DOM, etc.)</span>
-- <lucide-circle-alert class="text-orange" /> Small server size limit <span class="opacity-50">(10 MB maximum)</span>
+- <lucide-circle-alert class="text-orange" /> Small server size limit <span class="opacity-50">(10MB gzip maximum)</span>
 
 </v-clicks>
 
@@ -349,10 +349,14 @@ layout: center
 
 # [Nitro]{.text-pink} in the wild
 
+<v-clicks>
+
 - <logos-react/> [React]{.text-cyan}: TanStack Start
 - <logos-vue/> [Vue]{.text-green}: Nuxt
 - <logos-angular-icon/> [Angular]{.text-red}: AnalogJS
 - <logos-solidjs-icon/> [SolidJS]{.text-blue}: SolidStart
+
+</v-clicks>
 
 ---
 layout: center
