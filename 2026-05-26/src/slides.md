@@ -11,7 +11,9 @@ fonts:
 
 # The [Vite]{.text-primary} Ecosystem
 
-## From [DX]{.text-primary} to [AX]{.text-primary}, Building the Open-Source Stack for the AI Era
+::h2{v-click}
+From [DX]{.text-primary} to [AX]{.text-primary}, Building the Open-Source Stack for the AI Era
+::
 
 <div abs-br mx-10 my-12 flex="~ col" text-sm text-right>
   <div>Adeo Dev Summit</div>
@@ -21,11 +23,7 @@ fonts:
 <!--
 Hello everyone. I'm really happy to be here at the Adeo Dev Summit.
 
-The panel right before me in this room was about AI sovereignty — who owns the future, who controls the stack. Big question. I'm going to spend the next 45 minutes giving you the **technical** version of that answer.
-
-The title is "The Vite Ecosystem: From DX to AX". DX you know, that's Developer Experience. AX is a newer term: Agent Experience. By the end we'll see why the two are converging — and why this matters for sovereignty.
-
-Let's go.
+Today I will be talking about the shift toward Agent Experience and how we are building the open source stack for the AI era.
 -->
 
 ---
@@ -43,7 +41,7 @@ layout: center
 </v-clicks>
 
 <div v-click class="mt-12 opacity-70 text-lg">
-... at Adeo and Decathlon, today.
+... at Adeo, today.
 </div>
 
 <!--
@@ -51,11 +49,7 @@ Let me start with these numbers.
 
 At Adeo and Decathlon combined, you run more than 450 Vue.js applications. More than 400 are built with Vite. And about 37 are Nuxt.
 
-When I look at this, I see two things.
-
 First: thank you. You are exactly why this ecosystem exists and why it's now the default in our industry.
-
-Second, and this is what I want to talk about today: when you have 419 Vite apps, Vite is no longer a tool. Vite is your platform. And what's happening on top of that platform — that's the interesting part.
 -->
 
 ---
@@ -117,9 +111,9 @@ In 2026, our codebases aren't only edited by humans anymore. They're edited by a
 
 These agents are users of your stack too. They need structured logs they can read, predictable builds, clear APIs, deterministic deploy targets.
 
-So the question becomes: what does your toolchain look like, if you take Agent Experience seriously?
+Last week, 26% of the `nuxt dev` commands were run by agents.
 
-That's what I want to explore through three open-source projects, all rooted in the Vite ecosystem.
+So the question is: what does your toolchain look like, if you take Agent Experience seriously?
 -->
 
 ---
@@ -131,6 +125,14 @@ layout: center
 <p v-click>How can we improve agents accessing your docs?</p>
 
 <p v-click class="text-yellow">55% of nextjs.org traffic is from AI agents.</p>
+
+<!--
+Agents are crawling your documentation.
+
+So how can we improve their experience accessing them?
+
+Did you know that 55% of nextjs traffic is from AI agents nowadays?
+-->
 
 ---
 
@@ -152,15 +154,29 @@ layout: center
 
 <p v-click>Bonus: you save money to teams using agents to fetch your docs as less tokens are used when fetching Markdown content.</p>
 
+<!--
+Something we all now today, agents are good at Markdown
+
+Here's some best practices you can follow today for improving the agent readability.
+
+- (bullet points)
+-->
+
 ---
 
 # Example on **nuxt.com**
 
 <img src="/nuxt-website-markdown.png" >
 
+<!--
+Here's an example on requesting nuxt.com docs with the text/markdown accept header.
+
+Reducing the size of the input agents have to consume to understand the data is part of the agent experience.
+-->
+
 ---
 
-# MCP
+# MCP (Model Context Protocol)
 
 <p v-click>Help agents find up-to-date resources and reduce hallucinations.</p>
 
@@ -177,13 +193,25 @@ layout: center
 
 </v-clicks>
 
-<p v-click>Bonus: <a href="https://ui.nuxt.com/mcp">ui.nuxt.com/mcp</a> detects if the header accepts `text/html` and returns the documentation on how to install the MCP client for the user.</p>
+<p v-click>Bonus: <a href="https://ui.nuxt.com/mcp" target="_blank">ui.nuxt.com/mcp</a> detects if the header accepts `text/html` and returns the documentation on how to install the MCP client for the user.</p>
+
+<!--
+And there's more, adding an MCP to your documentation helps agents find up-to-date resources, categorize them, and reduce hallucinations.
+
+We shipped the Nuxt UI MCP with these tools.
+
+- (bullet points)
+-->
 
 ---
 
 # Nuxt UI MCP usage for last 30 days
 
 <img src="/nuxt-ui-mcp-usage.png">
+
+<!--
+And our Nuxt UI MCP is widely used, last month we had 20M requests.
+-->
 
 ---
 
@@ -202,7 +230,16 @@ layout: center
 
 </v-clicks>
 
-<p v-click><a href="https://docus.dev">docus.dev</a></p>
+<p v-click><a href="https://docus.dev" target="_blank">docus.dev</a></p>
+
+<!--
+But don't worry, we got your back with Docus.
+Because a page in your wiki is dead weight if you AI can't read it, Docus makes sure it does.
+If you know VitePress, it is our version of it, but better haha, built with Nuxt, and made for the agentic era.
+It ships with:
+- A Native MCP server + auto generated llms.txt
+- ...
+-->
 
 ---
 layout: cover
@@ -213,6 +250,10 @@ layout: cover
 Docus meets Adeo Design System.
 
 [docus-adeo-mozaic.vercel.app](https://docus-adeo-mozaic.vercel.app)
+
+<!--
+Let's have a quick demo using Adeo Design System.
+-->
 
 ---
 layout: cover
@@ -234,9 +275,9 @@ First pillar: Nitro. If you've touched Nuxt, you've touched Nitro — it's the s
 
 - **Deploy anywhere**: run the same code on Node.js, CF Workers, Deno, Bun, AWS, Vercel, and more.
 - **Production server**: add a `server.ts` file or create your server logic in `server/` folder.
-- **Built for speed**: Vite 8 (rolldown-powered) dev experience with HMR on the server, sub-second cold production builds, and output bundles under 10kB.
+- **Built for speed**: Vite 8 (rolldown-powered) dev experience with HMR on the server, sub-second cold production builds, and output bundles under 60kB.
 - **Batteries included**: storage, caching, and SQL across runtimes, all optional,
-- **Minimal overhead**: progressive approach, add it as a Nitro plugin.
+- **Minimal overhead**: progressive approach, add it as a Vite plugin.
 
 </v-clicks>
 
@@ -249,13 +290,13 @@ First pillar: Nitro. If you've touched Nuxt, you've touched Nitro — it's the s
 ```bash
 # Same code, different targets
 
-nitro build --preset=node-server          # Your Kubernetes clusters, EC2, on-prem
-nitro build --preset=bun                  # Bun runtime
-nitro build --preset=cloudflare-module    # Cloudflare Workers
-nitro build --preset=vercel               # Vercel
-nitro build --preset=aws-lambda           # AWS Lambda
-nitro build --preset=deno-deploy          # Deno Deploy
-nitro build --preset=azure                # Azure Functions
+NITRO_PRESET=node-server vite build         # Your Kubernetes clusters, EC2, on-prem
+NITRO_PRESET=bun vite build             # Bun runtime
+NITRO_PRESET=cloudflare-module vite build    # Cloudflare Workers
+NITRO_PRESET=vercel vite build               # Vercel
+NITRO_PRESET=aws-lambda vite build           # AWS Lambda
+NITRO_PRESET=deno-deploy vite build          # Deno Deploy
+NITRO_PRESET=azure vite build                # Azure Functions
 ```
 
 </v-click>
@@ -263,6 +304,13 @@ nitro build --preset=azure                # Azure Functions
 <div v-click class="mt-6 text-lg">
 
 One codebase. [20+ deploy targets]{.text-primary}. No vendor lock-in.
+
+</div>
+
+
+<div v-click class="mt-6 text-lg">
+
+Bonus: many platforms are auto-detected abd supported with zero configuration
 
 </div>
 
@@ -287,7 +335,7 @@ Vercel sponsors a lot of work on Nitro because of this. Vercel's product is the 
 <v-clicks>
 
 - <vscode-icons-file-type-nuxt /> **Vue** with Nuxt
-- <vscode-icons-file-type-reactjs /> **React** with Start
+- <vscode-icons-file-type-reactjs /> **React** with Tanstack Start
 - <vscode-icons-file-type-angular /> **Angular** with AnalogJS
 - <logos-solidjs-icon /> **Solid** with SolidStart
 - <UnjsNitro /> **Standalone** with Nitro as your API server or Vite Plugin
@@ -378,14 +426,10 @@ for await (const chunk of llmStream) {
 }
 ```
 
-<v-clicks class="mt-4">
-
 - 🐌 O(n²) work as the buffer grows
 - 🌪️ Layout jumps as headings and tables get rewritten
 - 🧱 Blocks the main thread on long responses
-- 💔 Awful UX on mobile (and Decathlon is mobile-first)
-
-</v-clicks>
+- 💔 Awful UX on mobile
 
 <!--
 This is what most Vue or React chatbot apps do today. On every new token, re-parse the entire accumulated string. Re-render the HTML.
@@ -405,7 +449,7 @@ layout: cover
 
 <v-click>
 
-### A fast, [streaming-ready markdown]{.text-primary} parser and renderer
+### A fast, [streaming-ready markdown]{.text-primary} parser and renderer.
 
 </v-click>
 
@@ -418,7 +462,7 @@ layout: cover
 
 </v-clicks>
 
-<p v-click><a href="https://comark.dev">comark.dev</a></p>
+<p v-click><a href="https://comark.dev" target="_blank">comark.dev</a></p>
 
 <!--
 Comark is a streaming markdown parser designed for the AI era.
@@ -438,12 +482,16 @@ Now let me show you the glue.
 
 # AI SDK + Comark
 
+<v-switch>
+
+<template #1>
+
 ```ts
 // API route
+import { defineHandler } from 'nitro'
 import { streamText } from 'ai'
-import { comarkStream } from 'comark'
 
-export default defineEventHandler(async (event) => {
+export default defineHandler(async (event) => {
   const result = streamText({
     model: 'anthropic/claude-sonnet-4.6',
     prompt: 'Compare these two drills...',
@@ -453,11 +501,70 @@ export default defineEventHandler(async (event) => {
 })
 ```
 
-```vue
+</template>
+
+<template #2>
+
+```vue {2,6,7,20-22}
+<script setup lang="ts">
+import { Chat } from '@ai-sdk/vue'
+import { isTextUIPart } from 'ai'
+import { Comark } from '@comark/vue'
+
+const input = ref('')
+const chat = new Chat()
+</script>
+
 <template>
-TODO
+  <div v-for="message in chat.messages" :key="message.id">
+    <template v-for="(part, i) in message.parts" :key="i">
+      <p v-if="isTextUIPart(part) && message.role === 'user'">{{ part.text }}</p>
+      <Suspense v-else-if="isTextUIPart(part)">
+        <Comark :markdown="part.text" :streaming="part.state === 'streaming'" caret />
+      </Suspense>
+    </template>
+  </div>
+
+  <form @submit.prevent="chat.sendMessage({ text: input }); input = ''">
+    <input v-model="input" />
+  </form>
 </template>
 ```
+
+</template>
+
+
+<template #3>
+
+```vue {3,4,11-18}
+<script setup lang="ts">
+import { Chat } from '@ai-sdk/vue'
+import { isTextUIPart } from 'ai'
+import { Comark } from '@comark/vue'
+
+const input = ref('')
+const chat = new Chat()
+</script>
+
+<template>
+  <div v-for="message in chat.messages" :key="message.id">
+    <template v-for="(part, i) in message.parts" :key="i">
+      <p v-if="isTextUIPart(part) && message.role === 'user'">{{ part.text }}</p>
+      <Suspense v-else-if="isTextUIPart(part)">
+        <Comark :markdown="part.text" :streaming="part.state === 'streaming'" caret />
+      </Suspense>
+    </template>
+  </div>
+
+  <form @submit.prevent="chat.sendMessage({ text: input }); input = ''">
+    <input v-model="input" />
+  </form>
+</template>
+```
+
+</template>
+
+</v-switch>
 
 <!--
 Vercel's AI SDK gives you `streamText` — one API to talk to any LLM provider. You don't write OpenAI-specific code anymore. You write AI SDK code, and you switch providers with one line.
@@ -494,6 +601,7 @@ const result = streamText({
 - Built-in retries, fallbacks, caching
 - Observability: cost, latency, errors per model
 - Spend caps and rate limits per team
+- Zero Data Retention and No Prompt Training selection
 - All you need is to set the `AI_GATEWAY_API_KEY` env variable
 
 </v-clicks>
@@ -519,9 +627,19 @@ In a minute I'll switch provider live, in front of you. But first — one more t
 - **File-based routing** with automatic code-splitting per page and smart prefetching
 - **Layouts** for reusable components across pages without re-rendering
 - **SSR-safe data fetching** with retries, fallbacks, and caching
-- **320+ modules** to extend functionality when you need it
+- **300+ modules** to extend functionality when you need it
 - **Nitro under the hood** to deploy anywhere and fast boot times
 - **Layers** for sharing code across your 419 apps when you need it
+  ```ts
+  export default defineNuxtConfig({
+    extends: [
+      './features/product/',
+      './features/cart/',
+      './features/support/',
+      './features/blog/'
+    ]
+  })
+  ``` 
 
 </v-clicks>
 
@@ -561,7 +679,7 @@ Each command:
 
 </v-click>
 
-<a href="https://nuxt.com/modules" v-click>nuxt.com/modules</a>
+<a href="https://nuxt.com/modules" v-click target="_blank">nuxt.com/modules</a>
 
 <!--
 Adding a module is one command. The CLI installs the dependency, registers the module in `nuxt.config.ts`, and auto-imports its composables.
@@ -581,7 +699,7 @@ In a plain Vite app you'd be installing 5 packages, configuring 5 things, writin
 layout: cover
 ---
 
-# SSR is optional
+# SSR is [optional]{.text-primary}
 
 <v-clicks>
 
@@ -597,12 +715,22 @@ That's it!
 </v-clicks>
 
 ---
+
+# Agents can write Nuxt code
+
+<p v-click><a href="https://nuxt.com/evals" target="_blank">nuxt.com/evals</a></p>
+
+<img src="/nuxt-evals.png" v-click />
+
+---
 layout: cover
 ---
 
 # Agentic Nuxt
 
 Live Demo of a Leroy Merlin with an AI Agent.
+
+[adeo-nuxt-ai-demo.vercel.app](https://adeo-nuxt-ai-demo.vercel.app/)
 
 <!--
 [live demo]
@@ -630,52 +758,25 @@ That's pillar 3.
 -->
 
 ---
-layout: cover
----
 
-# Same app, [less code to write]{.text-primary}
-
-<h2 v-click>Less token to spend.</h2>
-
-<!--
-Recap of what we just saw.
-
-Everything you wrote yourself in your 419 Vite apps — routing, layouts, env handling, SSR plumbing, API hookups, module wiring — Nuxt gives you on day zero.
-
-Same Vite under the hood. Same Vue. Same speed. Way less code that *you* have to maintain.
-
-This is why I think the most valuable migration for your group is not "rewrite your Vite apps in React" or anything dramatic. It's "turn your Vite apps into Nuxt apps." One developer can do it for one app in an afternoon. Then it's just better.
--->
-
----
-layout: cover
----
-
-# Putting it [all together]{.text-primary}
-
-<!--
-OK. We covered three pillars. Let me show you the full picture, and then deploy.
--->
-
----
-
-# Our app stack
+# The stack
 
 <v-clicks class="text-lg">
 
 - **Nuxt**:
   - **Vite + Vue 3** for the the foundation (you already have it)
   - **Nitro** for the backend, deploy anywhere, including K8s
-- **Nuxt UI** for fast, streaming markdown
-- **AI SDK + AI Gateway + Comark** for the AI agent
+- **@mozaic-ds/vue** to use Adeo Design System
+- **AI SDK + Comark** for the Chat agent
+- **Workflows + Sandbox** for a reliable durable agent
 
 </v-clicks>
 
-<div v-click class="mt-8 text-lg">
+<p v-click>
 
-All open source. All works [outside Vercel]{.text-primary}. All works [great on Vercel]{.text-primary}.
+**Bonus:**: you get [observability for your agent](https://vercel.com/remi-test-trial-team/adeo-nuxt-ai-demo/workflows).
 
-</div>
+</p>
 
 <!--
 Five pieces. One app. All open source.
@@ -691,60 +792,19 @@ Let me deploy it live.
 layout: center
 ---
 
-# The [takeaway]{.text-primary}
-
-<v-clicks class="mt-8 text-xl">
-
-### Vite is no longer a bundler. It's your platform.
-
-### The platform now extends from DX to AX.
-
-### The OSS stack on top — Nitro, AI SDK, Nuxt — gives you full [portability]{.text-primary}.
-
-</v-clicks>
-
-<div v-click class="mt-10 text-2xl">
-
-**Deploy anywhere. Run anywhere. [Stay in control.]{.text-primary}**
-
-</div>
-
-<!--
-If you remember one thing.
-
-Vite is no longer a bundler. It's the foundation of a full-stack, AI-native open-source platform.
-
-The same platform that gives you DX — fast HMR, great error messages, clean APIs — extends to AX: structured tools, provider-agnostic LLM calls, MCP support.
-
-And the OSS stack on top — Nitro, AI SDK, Nuxt — gives you something nothing in the AI vendor world gives you today: portability. You can change cloud. You can change LLM provider. You can change frontend framework. Your code stays.
-
-That panel at 4:30 was about AI sovereignty. The technical answer to that question is right here. Deploy anywhere. Run anywhere. Stay in control.
--->
-
----
-layout: center
----
-
 # Resources
 
 <v-clicks class="mt-4 text-lg">
 
-- <vscode-icons-file-type-vite /> **Vite** — <a href="https://vite.dev">vite.dev</a>
-- <vscode-icons-file-type-nuxt /> **Nuxt** — <a href="https://nuxt.com">nuxt.com</a>
-- <UnjsNitro /> **Nitro** — <a href="https://nitro.build">nitro.build</a>
-- **Docus** — <a href="https://docus.dev">docus.dev</a>
-- **Comark** — <a href="https://comark.dev">comark.dev</a>
-- **AI SDK** — <a href="https://ai-sdk.dev">ai-sdk.dev</a>
+- <vscode-icons-file-type-vite /> **Vite** — <a href="https://vite.dev" target="_blank">vite.dev</a>
+- <vscode-icons-file-type-nuxt /> **Nuxt** — <a href="https://nuxt.com" target="_blank">nuxt.com</a>
+- <UnjsNitro /> **Nitro** — <a href="https://nitro.build" target="_blank">nitro.build</a>
+- **Docus** — <a href="https://docus.dev" target="_blank">docus.dev</a>
+- **Comark** — <a href="https://comark.dev" target="_blank">comark.dev</a>
+- **AI SDK** — <a href="https://ai-sdk.dev" target="_blank">ai-sdk.dev</a>
+- **Workflows** — <a href="https://workflow-sdk.dev" target="_blank">workflow-sdk.dev</a>
 
 </v-clicks>
-
-<!--
-Quick resources. All links you need.
-
-Nuxt at nuxt.com. Nitro at nitro.build. Vite at vite.dev. Comark in the unjs org on GitHub. AI SDK at ai-sdk.dev. AI Gateway at vercel.com/ai-gateway.
-
-All open source except the hosted AI Gateway itself — and the SDK is fully OSS.
--->
 
 ---
 src: '../../reuse/intro2.md'
