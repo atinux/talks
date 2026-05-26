@@ -1,5 +1,6 @@
-# Building for the Edge
 
-2025-05-13
+# The Vite Ecosystem: From DX to AX, Building the Open-Source Stack for the AI Era
 
-- [Strapi Conf](https://conf.strapi.io)
+2026-05-26
+
+- [Adeo DevSummit 2026](https://devsummit2026.sched.com/)
