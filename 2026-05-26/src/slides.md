@@ -814,5 +814,5 @@ src: '../../reuse/intro2.md'
 
 ---
 layout: end
-src: '../../reuse/thanks.md'
+src: '../../reuse/thanks2.md'
 ---
