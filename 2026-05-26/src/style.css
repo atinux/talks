@@ -1,0 +1,26 @@
+body {
+  @apply text-gray-100 font-normal;
+}
+
+.dark #slide-content {
+  background-color: black !important;
+}
+
+:root .dark {
+  --shiki-foreground: #eeeeee;
+  --shiki-dark-bg: blue !important;
+}
+
+h1 {
+  @apply font-normal text-3xl;
+}
+[layout="center"] h1 {
+  @apply text-5xl;
+}
+
+.text-primary {
+  @apply text-white font-bold;
+}
+.text-secondary {
+  @apply text-cyan;
+}

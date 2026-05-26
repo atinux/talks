@@ -8,9 +8,11 @@ class: 'text-center pb-5'
 Slides are available on [atinux/talks](https://github.com/atinux/talks)
 
 <!--
-I would like to thank you for testing Nuxt Auth Utils and giving me your feedback.
+Thank you so much for your attention.
 
-A huge thank you to all the people who contributed to it and made the library possible!
+A huge thank you to all the open-source contributors behind Vite, Nitro, the unjs ecosystem and the AI SDK — none of what I showed today exists without them.
 
-And of course, thank you here in the live stream for listening to me, I hope you enjoyed it and that you are now ready to implement auth in your Nuxt app!
+And thank you to Adeo and Decathlon for inviting me. I'm around for the rest of the day — come grab me if you want to talk about migrating any of those 419 apps, or about anything Vite, Nitro, AI SDK, or Vercel.
+
+Questions?
 -->
