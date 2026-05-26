@@ -168,7 +168,7 @@ Here's some best practices you can follow today for improving the agent readabil
 
 # Example on **nuxt.com**
 
-<img src="/nuxt-website-markdown.png" >
+<img src="https://talk-adeo.vercel.app/nuxt-website-markdown.png" >
 
 <!--
 Here's an example on requesting nuxt.com docs with the text/markdown accept header.
@@ -256,6 +256,13 @@ Docus meets Adeo Design System.
 <!--
 Let's have a quick demo using Adeo Design System.
 -->
+
+---
+
+<SlidevVideo autoplay controls>
+  <!-- Anything that can go in an HTML video element. -->
+  <source src="/adeo-docus.mp4" type="video/mp4" />
+</SlidevVideo>
 
 ---
 layout: cover
@@ -362,15 +369,27 @@ layout: cover
 
 <p v-clicks>Add Nitro to your Vite app</p>
 
-<!--
-Live coding starts now.
+---
 
-The app we're going to build is a product assistant — imagine a chatbot for store associates at Leroy Merlin or Decathlon. An associate asks "what's the difference between these two drills?" and the assistant answers, using product data and an LLM.
+<SlidevVideo autoplay controls>
+  <!-- Anything that can go in an HTML video element. -->
+  <source src="/vite-to-nitro.mp4" type="video/mp4" />
+</SlidevVideo>
 
-I start with a plain Vite Vue app — what you know — and I add Nitro on top.
+---
+layout: cover
+---
 
-[switch to terminal — checkpoint: 01-nitro]
--->
+# Demo 2
+
+<p v-clicks>Build output with Nitro</p>
+
+---
+
+<SlidevVideo autoplay controls>
+  <!-- Anything that can go in an HTML video element. -->
+  <source src="/nitro-build-output.mp4" type="video/mp4" />
+</SlidevVideo>
 
 ---
 layout: cover
@@ -479,6 +498,13 @@ About 30x faster than `marked` on long streaming responses, in our benchmarks. A
 
 Now let me show you the glue.
 -->
+
+---
+
+<SlidevVideo autoplay controls>
+  <!-- Anything that can go in an HTML video element. -->
+  <source src="/comark-stream.mp4" type="video/mp4" />
+</SlidevVideo>
 
 ---
 
@@ -734,6 +760,20 @@ Live Demo of a Leroy Merlin with an AI Agent.
 
 [adeo-nuxt-ai-demo.vercel.app](https://adeo-nuxt-ai-demo.vercel.app/)
 
+---
+
+<SlidevVideo autoplay controls>
+  <!-- Anything that can go in an HTML video element. -->
+  <source src="/leroy-chat-agent.mp4" type="video/mp4" />
+</SlidevVideo>
+
+---
+
+<SlidevVideo autoplay controls>
+  <!-- Anything that can go in an HTML video element. -->
+  <source src="/leroy-image-gen.mp4" type="video/mp4" />
+</SlidevVideo>
+
 <!--
 [live demo]
 
@@ -780,15 +820,12 @@ That's pillar 3.
 
 </div>
 
-<!--
-Five pieces. One app. All open source.
+---
 
-You can run this whole stack on a Node.js server in your Kubernetes cluster, with on-prem LLMs, with your own logging backend. Nothing forces you to use Vercel.
-
-But if you do use Vercel — full disclosure, my employer — you get an experience designed end-to-end for this stack. That's the deal. Best OSS, best paved road, your choice.
-
-Let me deploy it live.
--->
+<SlidevVideo autoplay controls>
+  <!-- Anything that can go in an HTML video element. -->
+  <source src="/vercel-workflows.mp4" type="video/mp4" />
+</SlidevVideo>
 
 ---
 layout: center
