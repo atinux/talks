@@ -11,9 +11,11 @@ fonts:
 
 # The [Vite]{.text-primary} Ecosystem
 
-::h2{v-click}
+<h2 v-click>
+
 From [DX]{.text-primary} to [AX]{.text-primary}, Building the Open-Source Stack for the AI Era
-::
+
+</h2>
 
 <div abs-br mx-10 my-12 flex="~ col" text-sm text-right>
   <div>Adeo Dev Summit</div>
@@ -761,7 +763,7 @@ That's pillar 3.
 
 # The stack
 
-<v-clicks class="text-lg">
+<v-clicks>
 
 - **Nuxt**:
   - **Vite + Vue 3** for the the foundation (you already have it)
@@ -772,11 +774,11 @@ That's pillar 3.
 
 </v-clicks>
 
-<p v-click>
+<div v-click>
 
 **Bonus:**: you get [observability for your agent](https://vercel.com/remi-test-trial-team/adeo-nuxt-ai-demo/workflows).
 
-</p>
+</div>
 
 <!--
 Five pieces. One app. All open source.
